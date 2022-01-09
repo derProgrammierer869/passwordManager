@@ -1,2 +1,2 @@
 # passwordManager
-A simple terminal application designed to save passwords, with an interface designed to let the user retrieve passwords to the entered apps/ websites
+A simple terminal application designed to save passwords, with an interface designed to let the user retrieve passwords to the entered apps/ websites. Three files need to be created in order to use this program; login_data_file.txt, websites.txt, and password_manager_file.txt. I was not able to upload them here, but those files need to be in the same location as the main .py file. All of the inputs you do to the program are case sensitive. This is still a project in progress, I just upload here to document my progress and so I can access the files remotely. 
