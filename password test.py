@@ -1,11 +1,11 @@
 import time
 import os
-import json 
 os.system('pause') 
 
 login_data = {}
 website = {}
 
+#where the user signs up
 def sign_up_sequence():
     print('\n------------------Sign Up-----------------------------------------------------------------------------------------------\n')
     print('Enter a new password and username.')
@@ -20,7 +20,8 @@ def sign_up_sequence():
         login_data_file.close()
         if len(login_data) == 1:
             break
-        
+
+#where the user signs in        
 def login_sequence():
     print('\n------------------Sign In-----------------------------------------------------------------------------------------------\n')
     print('Enter your password and username.')
@@ -37,6 +38,7 @@ def login_sequence():
         elif loginName != login_data[loginName] or loginPass != login_data[loginPass]:     
             print('\nWrong login. Please re-enter your username and password.\n')
 
+#this checks to see if th user needs to sign up or can proceed with the sign in screen
 def login_check():
     f = open('login_data_file.txt', 'r')
     for line in f:
@@ -48,18 +50,20 @@ def login_check():
         
     if len(login_data) >= 1 :
         login_sequence()
-        
+
+#start of the program        
 def start():
     login_check()        
 
 
-
+#the main menu
 def main_menu():
     print('Select a menu option:',
     '\n1.Retrieve a password',
     '\n2.Enter a new password',
     '\n3.Exit to desktop')
 
+#lets user retrieve stored passwords
 def menu1():
     f = open('password_manager_file.txt', 'r')
     for line in f:
@@ -84,7 +88,7 @@ def menu1():
         if done == str('No'):                        
             main_menu() 
 
-
+#lets user add new passwords
 def menu2():
     website_open = True
     while website_open:
@@ -100,7 +104,7 @@ def menu2():
             website_open = False
             
 
-
+#end of the program
 def menu3():
     print('Goodbye Nicholas!') 
     time.sleep(2)
