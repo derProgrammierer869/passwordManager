@@ -33,7 +33,7 @@ def login_sequence():
         loginName = input("Enter username: ")
         loginPass = input("Enter password: ")
         if loginName in login_data and login_data[loginName] == loginPass:
-            print('\n------------------Hello Nicholas!---------------------------------------------------------------------------------------\n')
+            print('\n------------------Hello', loginName,'!---------------------------------------------------------------------------------------\n')
             break   
         elif loginName != login_data[loginName] or loginPass != login_data[loginPass]:     
             print('\nWrong login. Please re-enter your username and password.\n')
@@ -106,7 +106,7 @@ def menu2():
 
 #end of the program
 def menu3():
-    print('Goodbye Nicholas!') 
+    print('Goodbye!') 
     time.sleep(2)
     exit()
 start()
